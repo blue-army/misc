@@ -10,6 +10,6 @@ http.createServer((req, res) => {
   res.end(`<html><head><meta http-equiv="refresh" content="2"></head><body>${message}</body></html>`);
 
   console.log("handled request: " + reqCnt++);
-}).listen(3000);
+}).listen(80);
 
-console.log('server running on port 3000');
+console.log('server running on port 80');

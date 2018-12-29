@@ -1,10 +1,10 @@
-FROM node:8-slim
+FROM mcr.microsoft.com/azure-functions/node:2.0
 
-WORKDIR /server
+WORKDIR /home/site/wwwroot
 
-COPY . /server
+COPY . /home/site/wwwroot
 RUN npm install
 RUN node_modules/.bin/tsc -p ./src
 
-EXPOSE 3000
+EXPOSE 80
 CMD [ "npm", "start" ]
