@@ -13,9 +13,8 @@ RUN ./build.sh
 
 FROM mcr.microsoft.com/azure-functions/node:2.0
 
-WORKDIR /functions
-
-ENV AzureWebJobsScriptRoot=/functions
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot
+WORKDIR /home/site/wwwroot
 
 COPY --from=builder /server/dist .
 COPY host.json .
