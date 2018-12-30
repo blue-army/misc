@@ -18,3 +18,5 @@ WORKDIR /functions
 ENV AzureWebJobsScriptRoot=/functions
 
 COPY --from=builder /server/dist .
+COPY host.json .
+COPY local.settings.json .
