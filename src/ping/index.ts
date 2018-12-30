@@ -1,7 +1,11 @@
 "use strict";
 
 export function ping(context: any, req: any) {
+    context.log('one');
+
     return new Promise<void>(resolve => {
+
+        context.log('two');
 
         if (req.query.name || (req.body && req.body.name)) {
             context.res = {
@@ -16,6 +20,8 @@ export function ping(context: any, req: any) {
             };
         }
 
+        context.log('three');
         resolve();
+        context.log('four');
     });
 }
