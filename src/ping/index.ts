@@ -6,7 +6,7 @@ export function ping(context: any, req: any) {
         if (req.query.name || (req.body && req.body.name)) {
             context.res = {
                 // status: 200, /* Defaults to 200 */
-                body: "Hello " + (req.query.name || req.body.name)
+                body: "Yo " + (req.query.name || req.body.name)
             };
         }
         else {
